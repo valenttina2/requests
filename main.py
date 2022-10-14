@@ -51,3 +51,28 @@ response=requests.put(url, data={
     'body':'mepostbody'
 })
 print(response.json())
+
+
+#patch-запрос
+url='https://jsonplaceholder.typicode.com/posts/1'
+print(requests.get(url).json())
+
+response=requests.patch(url, data={
+    'id':1,
+    'userId':'20',
+    'title':'mytitle',
+
+})
+print(response.json())
+
+# delete-запрос
+url = 'https://jsonplaceholder.typicode.com/posts/1'
+print(requests.get(url).json())
+
+response = requests.delete(url, data={
+    'id': 1,
+    'userId': '20',
+    'title': 'mytitle',
+
+})
+print(response.json())
